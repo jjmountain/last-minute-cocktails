@@ -1,8 +1,19 @@
 <div class='container'>
   <header>
     <h1>Last Minute Cocktails</h1>
+    <%= form_tag cocktails_path, method: :get do %>
+      <%= select_tag :query, options_from_collection_for_select(Ingredient.all, :id, :name) %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </header>
   <div class='row d-flex justify-content-center'>
     <%= render partial: 'cocktail_card', collection: @cocktails %>
   </div>
 </div>
+
+
+<script>
+$(document).ready(function() {
+    $('#query').select2();
+});
+</script>
