@@ -36,7 +36,7 @@ alphabet_array.each do |letter|
   cocktail_json = JSON.parse(cocktail)
     cocktail_json['drinks'].each do | cocktail |
       ## create cocktail
-      new_cocktail = Cocktail.create(name: cocktail['strDrink'], thumbnail: cocktail['strDrinkThumb'])
+      new_cocktail = Cocktail.create(name: cocktail['strDrink'], thumbnail: cocktail['strDrinkThumb'], instructions: cocktail['strInstructions'])
 
       ## look at each ingredient field from 1-15
       nums = 1..15

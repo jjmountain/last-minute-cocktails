@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='row d-flex justify-content-center my-5'>
+    <div class='col-sm-4'>
+      <img src=<%= @cocktail.thumbnail %> style="width: 300px;">
+    </div>
+    <div class='col-sm-4' style="text-align: right;">
+    <h4>Ingredients</h4>
+      <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <li><%= dose.ingredient.name %> - <%= dose.description %></li>
+      <% end %>
+      </ul>
+      <h5>Instructions</h5>
+      <p><%= @cocktail.instructions %></p>
+
+    </div>
+  </div>
+</div>

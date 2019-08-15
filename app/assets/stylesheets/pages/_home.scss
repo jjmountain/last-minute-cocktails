@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+
+
+header {
+  font-family: $titles-font;
+  margin: 3rem 0;
+  h1 {
+    font-family: $titles-font;
+  }
+}

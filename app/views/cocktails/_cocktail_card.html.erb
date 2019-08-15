@@ -1,0 +1,6 @@
+<div class='d-flex card col-sm-3 px-0 my-4 mx-4'>
+  <%= link_to cocktail_path(cocktail_card.id) do %><img class="card-img-top" src=<%=cocktail_card.thumbnail %> alt=<%= cocktail_card.name %>><% end %>
+  <div class="card-body p-1">
+    <%= link_to cocktail_path(cocktail_card.id) do %><h5 class="card-title my-2" style="text-align: center;"><%= cocktail_card.name %></h5><% end %>
+  </div>
+</div>
