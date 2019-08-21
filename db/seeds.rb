@@ -50,7 +50,7 @@ alphabet_array.each do |letter|
           Dose.create(
             ingredient: Ingredient.find_by(name: cocktail[ingredient_key]),
             cocktail: new_cocktail,
-            description: cocktail[dose_keys[index + 1]])
+            description: cocktail[dose_keys[index]])
         end
       end
     end

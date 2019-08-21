@@ -724,6 +724,11 @@
     webpack-cli "^3.3.2"
     webpack-sources "^1.3.0"
 
+"@ttskch/select2-bootstrap4-theme@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@ttskch/select2-bootstrap4-theme/-/select2-bootstrap4-theme-1.2.3.tgz#499d5362a4432dc2ff574adef4c4e387c0879c25"
+  integrity sha512-cVH3yrBBmkNrkqKPvHbt8dzP7NysAQfzJULxXlzkdf7NicoSUWbpjDjDGqMtUIIldDByrf2uC1HKKFRelWunQQ==
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -5984,6 +5989,16 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
   integrity sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo=
+
+select2-bootstrap-theme@0.1.0-beta.10:
+  version "0.1.0-beta.10"
+  resolved "https://registry.yarnpkg.com/select2-bootstrap-theme/-/select2-bootstrap-theme-0.1.0-beta.10.tgz#b9426ecfc03bf4a235e76a132377574310469ac0"
+  integrity sha1-uUJuz8A79KI152oTI3dXQxBGmsA=
+
+select2@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.8.tgz#3773bec1e5b96620ed98ca5ded53c0da47e7753f"
+  integrity sha512-H/I2mq71oiEe51S74hdUv4QubH1EJNLEMnjfQucftLa8GiuT5+RKIHwlV/7I/YUqZg0wsYQM946eFG/ntRPF/Q==
 
 selfsigned@^1.10.4:
   version "1.10.4"

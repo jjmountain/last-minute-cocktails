@@ -1,13 +1,21 @@
 // Specific CSS for your home-page
 
 body {
-  background-image: linear-gradient( 91.3deg,  rgba(135,174,220,1) 1.5%, rgba(255,255,255,1) 100.3% );
+  background: lemonchiffon;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
 header {
-  font-family: $titles-font;
-  margin: 3rem 0;
-  h1 {
-    font-family: $titles-font;
-  }
+}
+
+#cocktail-hero {
+
+}
+
+.highlight {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--op-green) 65%);
 }

@@ -32,6 +32,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'pg_search'
+gem 'jquery-rails'
+gem "select2-rails"
+
 
 
 # Use ActiveStorage variant

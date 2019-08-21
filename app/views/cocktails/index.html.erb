@@ -1,19 +1,48 @@
-<div class='container'>
-  <header>
-    <h1>Last Minute Cocktails</h1>
-    <%= form_tag cocktails_path, method: :get do %>
-      <%= select_tag :query, options_from_collection_for_select(Ingredient.all, :id, :name) %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
-    <% end %>
-  </header>
-  <div class='row d-flex justify-content-center'>
-    <%= render partial: 'cocktail_card', collection: @cocktails %>
+<div id="page-container">
+  <div class='container mt-2 py-2 bg-white'>
+    <header class="d-flex justify-content-around align-items-center" style="padding: 2rem;">
+    <div id="cocktail-hero">
+       <%= image_tag 'beverage-bubble-citrus-416520.jpg', alt: "Cocktail pic", width: 250 %>
+    </div>
+    <div class="d-flex flex-column justify-content-around">
+      <h1 class="highlight" style="margin-bottom: 3rem;">...Last Minute Cocktails</h1>
+      <div>
+        <p>Gimmie cocktails with</p>
+        <div class='form-group'>
+        <%= form_tag cocktails_path, method: :get do %>
+          <%= select_tag :query, options_from_collection_for_select(Ingredient.all.order(name: :asc), :id, :name), class: 'form-control custom-select custom-select-lg mb-3', style: 'max-width: 200px; background-color: white;' %>
+          <%= submit_tag "Search", class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+    </header>
+    <div class='row d-flex justify-content-center'>
+      <% unless @cocktails.empty? %>
+        <%= render partial: 'cocktail_card', collection: @cocktails %>
+      <% else %>
+        There are no cocktails with that ingredient yet. Click here to add one.
+      <% end %>
+    </div>
   </div>
 </div>
 
-
 <script>
-$(document).ready(function() {
-    $('#query').select2();
-});
+
+  $(document).on('ready', function () {
+    $("#query").select2({
+      placeholder: "Choose an ingredient",
+      theme: "bootstrap4"
+    });
+
+    if(performance.navigation.type == 2){
+   location.reload(true);
+}
+  });
+
+
 </script>
+
+
+
