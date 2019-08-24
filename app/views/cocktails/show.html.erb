@@ -1,19 +1,26 @@
 <div class='container'>
-  <div class='row d-flex justify-content-center my-5'>
+  <div class='row d-flex justify-content-left mt-5'>
+    <div class='col-sm-2'>
+    <%= link_to cocktails_path do %><h3 class="fas fa-long-arrow-alt-left"></h3><% end %>
+    </div>
+  </div>
+  <div class='row d-flex justify-content-center border'>
     <div class='col-sm-4'>
       <img src=<%= @cocktail.thumbnail %> style="width: 300px;">
     </div>
-    <div class='col-sm-4' style="text-align: right;">
+    <div class='col-sm-4 bg-white mx-5'>
     <h4>Ingredients</h4>
-      <ul>
+      <ul style="list-style-type: none; padding: 0;">
       <% @cocktail.doses.each do |dose| %>
-        <li><%= dose.ingredient.name %> - <%= dose.description %></li>
+        <li><%= dose.ingredient.name %> - <%= dose.description %><%= link_to '[x]', dose_path(dose), method: :delete %></li>
       <% end %>
       </ul>
-      <h5>Instructions</h5>
-      <p><%= @cocktail.instructions %></p>
-
+      <h4>Instructions</h4>
+      <p style=><%= @cocktail.instructions %></p>
     </div>
-  </div>
+      <div class='col-sm-3 bg-white'>
+        <h4>Add an Ingredient</h4>
+      </div>
+    </div>
 </div>
 

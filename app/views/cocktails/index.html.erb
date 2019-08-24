@@ -2,7 +2,7 @@
   <div class='container mt-2 py-2 bg-white'>
     <header class="d-flex justify-content-around align-items-center" style="padding: 2rem;">
     <div id="cocktail-hero">
-       <%= image_tag 'beverage-bubble-citrus-416520.jpg', alt: "Cocktail pic", width: 250 %>
+       <%= image_tag 'beverage-bubble-citrus-416520.jpg', alt: "Cocktail pic", width: 200 %>
     </div>
     <div class="d-flex flex-column justify-content-around">
       <h1 class="highlight" style="margin-bottom: 3rem;">...Last Minute Cocktails</h1>
@@ -10,7 +10,7 @@
         <p>Gimmie cocktails with</p>
         <div class='form-group'>
         <%= form_tag cocktails_path, method: :get do %>
-          <%= select_tag :query, options_from_collection_for_select(Ingredient.all.order(name: :asc), :id, :name), class: 'form-control custom-select custom-select-lg mb-3', style: 'max-width: 200px; background-color: white;' %>
+          <%= select_tag :query, options_from_collection_for_select(Ingredient.all.order(name: :asc), :id, :name), class: 'form-control custom-select', style: 'max-width: 200px; background-color: white;' %>
           <%= submit_tag "Search", class: 'btn btn-primary' %>
         <% end %>
       </div>
