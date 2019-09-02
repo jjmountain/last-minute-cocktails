@@ -18,3 +18,5 @@
 console.log('Hello World from Webpacker')
 import 'bootstrap';
 import 'select2';
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();

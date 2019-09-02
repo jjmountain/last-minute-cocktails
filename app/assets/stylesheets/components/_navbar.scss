@@ -1,6 +1,16 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+nav {
+  font-family: 'Signika';
+}
+
+
+.navbar-filled {
+  background: rgb(123,5,5);
 }
 
 .navbar-lewagon .navbar-collapse {

@@ -1,16 +1,40 @@
 // Specific CSS for your home-page
 
-body {
-  background: lemonchiffon;
-}
+
 
 #page-container {
   position: relative;
   min-height: 100vh;
 }
 
-header {
+#main-banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), asset-url('alcohol-bar-beverage-4784.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
 }
+
+
+.navbar-text {
+  font-size: 2rem;
+  color: white;
+}
+
+.headline {
+  color: white;
+  font-size: 4rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+.headline-2 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  display: inline-block;
+  margin-bottom: 0;
+
+}
+
 
 #cocktail-hero {
 
