@@ -9,17 +9,19 @@
         <% end %>
       </div>
   </div>
+  </div>
+
   <div class='container mt-2 py-2 bg-white'>
-    <div class='row d-flex justify-content-center'>
-    <h2>Most popular</h2>
+  <div class="row"><h1 class='mt-4'>All our cocktails</h1>
+</div>
+    <div class='row d-flex'>
       <% unless @cocktails.empty? %>
         <%= render partial: 'cocktail_card', collection: @cocktails %>
       <% else %>
-        There are no cocktails with that ingredient yet. Click here to add one.
+        <h2>There are no cocktails with that ingredient yet. </h2>
       <% end %>
     </div>
   </div>
-</div>
 
 <script>
 
@@ -33,7 +35,6 @@
    location.reload(true);
 }
   });
-
 
 </script>
 

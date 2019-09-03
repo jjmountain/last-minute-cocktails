@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
     if params[:query].present?
       @cocktails = Cocktail.joins(:ingredients).where(ingredients: { id: params[:query] })
     else
-      @cocktails = Cocktail.all.sample(6)
+      @cocktails = Cocktail.all
     end
   end
 
@@ -15,4 +15,5 @@ class CocktailsController < ApplicationController
 
   def new
   end
+
 end
