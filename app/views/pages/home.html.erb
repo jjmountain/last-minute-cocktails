@@ -1,42 +1,13 @@
   <div id="main-banner">
   <div class="container d-flex justify-content-center flex-column h-100">
   <div>
-    <h1 class="my-3 headline">Try our award-winning cocktail recipes.</h1></div>
-    <div class='form-group'>
-        <%= form_tag cocktails_path, method: :get, id: 'search-form' do %>
-          <p class='mr-4 headline-2'>I've got</p><%= select_tag :query, options_from_collection_for_select(Ingredient.all.order(name: :asc), :id, :name), class: 'form-control custom-select', style: 'height: 3rem; max-width: 500px; background-color: white;' %>
-          <%= submit_tag "Let's get shaking", class: 'btn btn-primary search-btn' %>
-        <% end %>
+    <h1 class="my-3 headline">Try our award-winning cocktail recipes.</h1>
+  </div>
+   <%= simple_form_for :home_search, wrapper: :inline_form, html: { id: 'search-form', class: 'form-inline my-5', data: { controller: 'pages' } }, url: search_path, method: :get do |f| %>
+      <%= f.input :keyword, label: false, class: 'form-control-lg' %>
+      <%= f.button :submit, "I'm thirsty", class: 'btn-primary', id: 'search-button' %>
+    <% end %>
       </div>
   </div>
   </div>
-
-  <div class='container mt-2 py-2 bg-white'>
-  <div class="row"><h1 class='mt-4'>All our cocktails</h1>
-</div>
-    <div class='row d-flex'>
-      <% unless @cocktails.empty? %>
-        <%= render partial: 'cocktail_card', collection: @cocktails %>
-      <% else %>
-        <h2>There are no cocktails with that ingredient yet. </h2>
-      <% end %>
-    </div>
-  </div>
-
-<script>
-
-  $(document).on('ready', function () {
-    $("#query").select2({
-      placeholder: "Choose an ingredient",
-      theme: "bootstrap4"
-    });
-
-    if(performance.navigation.type == 2){
-   location.reload(true);
-}
-  });
-
-</script>
-
-
 

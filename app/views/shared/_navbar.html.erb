@@ -1,10 +1,21 @@
-<nav class="navbar fixed-top">
-  <a href="/" class="navbar-brand">
-  <div class='navbar-text ml-4'>
-    LastMinuteCocktails <i class="fas fa-cocktail"></i>
+
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-transparent">
+  <a class="navbar-brand" href="#">LastMinuteCocktails</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      
+    </ul>
+    <form class="form-inline mr-2">
+    <button class="btn btn-outline-light mr-3" type="button">Browse</button>
+    <button class="btn btn-outline-success" type="button">Add a Cocktail</button>
+    
+  </form>
   </div>
-    </a>
-    <%= link_to new_cocktail_path do %>
-      <button class='btn btn-primary'>Add a cocktail</button>
-    <% end %>
+  
 </nav>

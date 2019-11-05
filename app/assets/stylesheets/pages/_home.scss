@@ -6,15 +6,16 @@
   height: 100vh;
 }
 
-
-.navbar-text {
-  font-size: 2rem;
+nav h3 {
   color: white;
 }
 
+// body {
+//   margin-top: 2rem;
+// }
+
 .headline {
   color: white;
-  font-size: 4rem;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-weight: bold;
 }
@@ -28,10 +29,18 @@
 
 }
 
-
 #cocktail-hero {
-
 }
+
+#home_search_keyword {
+  width: 20rem;
+  height: 3rem;
+}
+
+#search-form, #search-button {
+  height: 3rem;
+}
+
 
 .highlight {
   background: linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--op-green) 65%);
